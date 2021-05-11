@@ -37,16 +37,20 @@ app.on('activate', function () {
 });
 
 ipcMain.on('app_version', (event) => {
+  console.log(`app_version: ${app.getVersion()}`)
   event.sender.send('app_version', { version: app.getVersion() });
 });
 
 autoUpdater.on('update-available', () => {
+  console.log(`update-available app_version: ${app.getVersion()}`)
   mainWindow.webContents.send('update_available');
 });
 autoUpdater.on('update-downloaded', () => {
+  console.log(`update-downloaded app_version: ${app.getVersion()}`)
   mainWindow.webContents.send('update_downloaded');
 });
 
 ipcMain.on('restart_app', () => {
+  console.log(`restart_app app_version: ${app.getVersion()}`)
   autoUpdater.quitAndInstall();
 });
