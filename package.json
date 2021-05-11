@@ -1,11 +1,12 @@
 {
-  "name": "electron-auto-update-example",
-  "version": "1.0.0",
+  "name": "electron-katsan",
+  "productName": "electron-katsan",
+  "version": "1.0.3",
   "description": "",
   "main": "main.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/johndyer24/electron-auto-update-example.git"
+    "type": "git",
+    "url": "https://github.com/matong1745/electron-auto-update-example.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,6 +21,7 @@
     "electron-builder": "^20.40.2"
   },
   "dependencies": {
-    "electron-updater": "^4.0.6"
+    "electron-updater": "^4.0.6",
+    "update-electron-app": "^2.0.1"
   }
 }
